@@ -1,0 +1,2 @@
+SC-LIO-SAM/SC-LIO-SAM:ouster-ros:sbg_ros_driver
+-DCATKIN_DEVEL_PREFIX=/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel -DCMAKE_INSTALL_PREFIX=/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/install -G Unix Makefiles

@@ -1,0 +1,2 @@
+set(ouster_ros_MESSAGE_FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/msg/PacketMsg.msg")
+set(ouster_ros_SERVICE_FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/srv/GetConfig.srv;/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/srv/SetConfig.srv;/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/srv/GetMetadata.srv")

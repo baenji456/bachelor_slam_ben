@@ -1,0 +1,166 @@
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target _lio_sam_generate_messages_check_deps_cloud_info[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target nav_msgs_generate_messages_cpp
+[  0%] Built target nav_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target actionlib_generate_messages_cpp[0m
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[  0%] Built target actionlib_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_py
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target _lio_sam_generate_messages_check_deps_cloud_info
+[  0%] Built target roscpp_generate_messages_eus
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[  0%] Built target std_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_eus[0m
+[  0%] Built target tf2_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target tf2_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target tf_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target tf_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_lisp
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target _catkin_empty_exported_target[0m
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[35m[1mScanning dependencies of target tf_generate_messages_eus[0m
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target _catkin_empty_exported_target
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target tf_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_py[0m
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target tf_generate_messages_eus
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target tf_generate_messages_lisp[0m
+[  0%] Built target nav_msgs_generate_messages_py
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_nodejs[0m
+[  0%] Built target tf_generate_messages_nodejs
+[35m[1mScanning dependencies of target pcl_msgs_generate_messages_cpp[0m
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target tf_generate_messages_lisp
+[  0%] Built target tf2_msgs_generate_messages_py
+[  0%] Built target nav_msgs_generate_messages_nodejs
+[  0%] Built target pcl_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_eus[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target actionlib_generate_messages_py[0m
+[35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target actionlib_generate_messages_py
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_generate_messages_eus
+[35m[1mScanning dependencies of target tf_generate_messages_py[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
+[  0%] Built target actionlib_generate_messages_nodejs
+[35m[1mScanning dependencies of target nav_msgs_generate_messages_eus[0m
+[  0%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target tf2_msgs_generate_messages_nodejs[0m
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target pcl_msgs_generate_messages_eus[0m
+[  0%] Built target tf_generate_messages_py
+[  0%] Built target tf2_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target pcl_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target pcl_msgs_generate_messages_py[0m
+[  0%] Built target tf2_msgs_generate_messages_lisp
+[  0%] Built target pcl_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target pcl_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target lio_sam_imuPreintegration[0m
+[  0%] Built target nav_msgs_generate_messages_eus
+[  0%] Built target pcl_msgs_generate_messages_nodejs
+[  0%] Built target pcl_msgs_generate_messages_py
+[35m[1mScanning dependencies of target lio_sam_generate_messages_py[0m
+[  0%] Built target pcl_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target lio_sam_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target lio_sam_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target lio_sam_generate_messages_eus[0m
+[  6%] [34m[1mGenerating Python from MSG lio_sam/cloud_info[0m
+[35m[1mScanning dependencies of target lio_sam_generate_messages_lisp[0m
+[ 12%] [34m[1mGenerating C++ code from lio_sam/cloud_info.msg[0m
+[ 18%] [34m[1mGenerating Javascript code from lio_sam/cloud_info.msg[0m
+[ 25%] [34m[1mGenerating EusLisp manifest code for lio_sam[0m
+[ 31%] [34m[1mGenerating Lisp code from lio_sam/cloud_info.msg[0m
+[ 37%] [34m[1mGenerating EusLisp code from lio_sam/cloud_info.msg[0m
+[ 37%] Built target lio_sam_generate_messages_lisp
+[ 37%] Built target lio_sam_generate_messages_nodejs
+[ 37%] Built target lio_sam_generate_messages_cpp
+[35m[1mScanning dependencies of target lio_sam_mapOptmization[0m
+[35m[1mScanning dependencies of target lio_sam_featureExtraction[0m
+[35m[1mScanning dependencies of target lio_sam_imageProjection[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/lio_sam_imuPreintegration.dir/src/imuPreintegration.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/lio_sam_imageProjection.dir/src/imageProjection.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/lio_sam_featureExtraction.dir/src/featureExtraction.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/lio_sam_mapOptmization.dir/src/mapOptmization.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/lio_sam_mapOptmization.dir/src/Scancontext.cpp.o[0m
+[ 75%] [34m[1mGenerating Python msg __init__.py for lio_sam[0m
+[ 75%] Built target lio_sam_generate_messages_eus
+[ 75%] Built target lio_sam_generate_messages_py
+[35m[1mScanning dependencies of target lio_sam_generate_messages[0m
+[ 75%] Built target lio_sam_generate_messages
+[01m[K/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/src/SC-LIO-SAM/SC-LIO-SAM/src/Scancontext.cpp:[m[K In function ‘[01m[Kfloat xy2theta(const float&, const float&)[m[K’:
+[01m[K/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/src/SC-LIO-SAM/SC-LIO-SAM/src/Scancontext.cpp:36:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
+   36 | [01;35m[K}[m[K // xy2theta
+      | [01;35m[K^[m[K
+[01m[K/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/src/SC-LIO-SAM/SC-LIO-SAM/src/imuPreintegration.cpp:[m[K In constructor ‘[01m[KTransformFusion::TransformFusion()[m[K’:
+[01m[K/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/src/SC-LIO-SAM/SC-LIO-SAM/src/imuPreintegration.cpp:53:43:[m[K [01;35m[Kwarning: [m[Kcatching polymorphic type ‘[01m[Ktf::TransformException[m[K’ {aka ‘[01m[Kclass tf2::TransformException[m[K’} by value [[01;35m[K-Wcatch-value=[m[K]
+   53 |             catch (tf::TransformException [01;35m[Kex[m[K)
+      |                                           [01;35m[K^~[m[K
+[01m[K/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/src/SC-LIO-SAM/SC-LIO-SAM/src/mapOptmization.cpp:[m[K In constructor ‘[01m[KmapOptimization::mapOptimization()[m[K’:
+[01m[K/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/src/SC-LIO-SAM/SC-LIO-SAM/src/mapOptmization.cpp:254:13:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kunused[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  254 |         int [01;35m[Kunused[m[K = system((std::string("exec rm -r ") + savePCDDirectory).c_str());
+      |             [01;35m[K^~~~~~[m[K
+[01m[K/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/src/SC-LIO-SAM/SC-LIO-SAM/src/mapOptmization.cpp:[m[K In member function ‘[01m[Kvoid mapOptimization::performSCLoopClosure()[m[K’:
+[01m[K/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/src/SC-LIO-SAM/SC-LIO-SAM/src/mapOptmization.cpp:708:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KyawDiffRad[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  708 |         float [01;35m[KyawDiffRad[m[K = detectResult.second; // not use for v1 (because pcl icp withi initial somthing wrong...)
+      |               [01;35m[K^~~~~~~~~~[m[K
+[ 81%] [32m[1mLinking CXX executable /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/devel/.private/lio_sam/lib/lio_sam/lio_sam_featureExtraction[0m
+[ 81%] Built target lio_sam_featureExtraction
+[ 87%] [32m[1mLinking CXX executable /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/devel/.private/lio_sam/lib/lio_sam/lio_sam_imageProjection[0m
+[ 87%] Built target lio_sam_imageProjection
+[ 93%] [32m[1mLinking CXX executable /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/devel/.private/lio_sam/lib/lio_sam/lio_sam_imuPreintegration[0m
+[ 93%] Built target lio_sam_imuPreintegration
+[100%] [32m[1mLinking CXX executable /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main/devel/.private/lio_sam/lib/lio_sam/lio_sam_mapOptmization[0m
+[100%] Built target lio_sam_mapOptmization

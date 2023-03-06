@@ -1,0 +1,43 @@
+<launch>
+
+    <arg name="project" default="lio_sam"/>
+
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find lio_sam)/launch/include/rosconsole/rosconsole_error.conf"/>
+
+    <!-- Parameters -->
+    <rosparam file="$(find lio_sam)/config/params_mulran.yaml" command="load" />
+
+    <!--  Transforms  -->
+    <node pkg="tf" type="static_transform_publisher"
+        name="gps_transform"
+        args="0 0 0 0 0 0 base_link gps 10" />
+
+    <node pkg="tf" type="static_transform_publisher"
+            name="imu_transform"
+            args="0 0 0 0 0 0 base_link imu 10" />
+    
+    <!-- EKF GPS-->
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_gps" respawn="true">
+        <!-- published -->
+        <remap from="odometry/filtered" to="odometry/navsat" />
+
+        <!-- subscribed - added manually  -->
+        <!-- odometry/gps -->
+        <remap from="imu_correct" to="imu/data" />
+    </node>
+
+    <!-- Navsat -->
+    <node pkg="robot_localization" type="navsat_transform_node" name="navsat" respawn="true">
+        <!-- <rosparam param="datum">[42.35893211, -71.09345588, 0.0, map, base_link]</rosparam> -->
+        <!-- published /> -->
+        <!-- odometry/gps -->
+
+        <!-- subscribed /> -->
+        <!-- <remap from="/imu/data_raw" to="imu_correct" /> -->
+        <!-- <remap from="imu_correct" to="imu/data" /> -->
+        <remap from="imu/data" to="imu/data" />
+        <remap from="gps/fix" to="gps/fix" />
+        <remap from="odometry/filtered" to="odometry/navsat" />
+    </node>
+
+</launch>
