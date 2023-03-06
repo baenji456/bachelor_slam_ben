@@ -1,0 +1,46 @@
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/./_setup_util.py
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/./local_setup.sh
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/./setup.zsh
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/./setup.bash
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/./cmake.lock
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/./local_setup.zsh
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/./setup.sh
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/./env.sh
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/./local_setup.bash
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Symlinking /home/stapler/Dokumente/04_ROS/sc_lio_sam/devel/lib/pkgconfig/catkin_tools_prebuild.pc
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/_setup_util.py, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./_setup_util.py)
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/local_setup.sh, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./local_setup.sh)
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/setup.zsh, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./setup.zsh)
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/setup.bash, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./setup.bash)
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/cmake.lock, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./cmake.lock)
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/local_setup.zsh, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./local_setup.zsh)
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/setup.sh, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./setup.sh)
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/env.sh, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./env.sh)
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/local_setup.bash, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./local_setup.bash)
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake)
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake)
+Cleaning: (/home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/.private/catkin_tools_prebuild/lib/pkgconfig/catkin_tools_prebuild.pc, /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/lib/pkgconfig/catkin_tools_prebuild.pc)
+Unlinking: /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./_setup_util.py
+Already unlinked: {}
+Unlinking: /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./local_setup.sh
+Already unlinked: {}
+Unlinking: /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./setup.zsh
+Already unlinked: {}
+Unlinking: /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./setup.bash
+Already unlinked: {}
+Unlinking: /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./local_setup.zsh
+Already unlinked: {}
+Unlinking: /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./setup.sh
+Already unlinked: {}
+Unlinking: /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./env.sh
+Already unlinked: {}
+Unlinking: /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/./local_setup.bash
+Already unlinked: {}
+Unlinking: /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
+Already unlinked: {}
+Unlinking: /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/stapler/Dokumente/04_ROS/Old_sc_lio_sam/devel/lib/pkgconfig/catkin_tools_prebuild.pc
+Already unlinked: {}

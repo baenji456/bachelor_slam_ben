@@ -1,0 +1,8 @@
+prefix=/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel
+
+Name: ouster_ros
+Description: Description of ouster_ros
+Version: 0.7.4
+Cflags: -I/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/include -I/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/include -I/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/ouster-sdk/ouster_client/include -I/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/ouster-sdk/ouster_client/include/optional-lite -I/usr/include/eigen3
+Libs: -L${prefix}/lib -louster_ros
+Requires: roscpp message_runtime std_msgs sensor_msgs geometry_msgs
