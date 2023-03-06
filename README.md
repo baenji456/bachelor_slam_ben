@@ -1,10 +1,10 @@
 # SC-LIO-SAM
-Für die Dokumentation siehe die Bachelorarbeit von Pfannes, Lennard sowie https://github.com/gisbi-kim/SC-LIO-SAM
+Für weitere Dokumentation siehe die Bachelorarbeit von Pfannes, Lennard sowie https://github.com/gisbi-kim/SC-LIO-SAM
 
 # Submodules
-Basierend auf SC-LIO-SAM https://github.com/gisbi-kim/SC-LIO-SAM
-Ouster LiDAR Treiber https://github.com/ouster-lidar/ouster-ros
-SBG IMU Treiber https://github.com/SBG-Systems/sbg_ros_driver
+* Basierend auf **SC-LIO-SAM** https://github.com/gisbi-kim/SC-LIO-SAM
+* **Ouster LiDAR Treiber** https://github.com/ouster-lidar/ouster-ros
+* **SBG IMU Treiber** https://github.com/SBG-Systems/sbg_ros_driver
 
 # How to use
 Die Schritte werden jeweils in unterschiedlichen Terminals ausgeführt
