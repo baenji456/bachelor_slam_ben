@@ -1,6 +1,9 @@
 # SC-LIO-SAM
 Für weitere Dokumentation siehe die Bachelorarbeit von Pfannes, Lennard sowie https://github.com/gisbi-kim/SC-LIO-SAM
 
+# Ideen
+* Entfernung dynamischer Objekte mit [removert](https://www.youtube.com/watch?v=UiYYrPMcIRU)
+
 # Submodules
 * Basierend auf **SC-LIO-SAM** https://github.com/gisbi-kim/SC-LIO-SAM
 * **Ouster LiDAR Treiber** https://github.com/ouster-lidar/ouster-ros
@@ -25,7 +28,7 @@ roslaunch lio_sam run.launch
 ```
 
 # Parameter
-Die Paramter des SC-LIO-SAm Packages sind in der Datei params_liosam.yaml zu finden. (LINK EINFÜGEN)
+Die Paramter des SC-LIO-SAM Packages sind in der Datei params_liosam.yaml zu finden. (LINK EINFÜGEN)
 Es gibt zwei Arten von Parametern, diese werden im Folgenden Einrichtungsparameter und Anpassungsparameter genannt. Einrichtungparameter sind Parameter, die für einen bestimmten Aufbau oder ein bestimmtes Projekt nur einmal angepasst werden müssen. Um einen Aufbau für verschiedene Anwendungen zu optimieren können Anpassungsparameter verändert werden.
 ## Einrichtungsparameter
 1. **Topics**: Namen bestimmter Topics, die von LiDAR und IMU gesendet und von SC_LIO_SAM verwendet werden
