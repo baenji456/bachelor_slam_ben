@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/share/common-lisp/ros/lio_sam/msg/cloud_info.lisp"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/share/common-lisp/ros/lio_sam/msg/cloud_info.lisp"
   "CMakeFiles/lio_sam_generate_messages_lisp"
 )
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros
+# Install script for directory: /home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/install")
+  set(CMAKE_INSTALL_PREFIX "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,62 +38,62 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros/msg" TYPE FILE FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/msg/PacketMsg.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros/msg" TYPE FILE FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/msg/PacketMsg.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros/srv" TYPE FILE FILES
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/srv/GetConfig.srv"
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/srv/SetConfig.srv"
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/srv/GetMetadata.srv"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/srv/GetConfig.srv"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/srv/SetConfig.srv"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/srv/GetMetadata.srv"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros/cmake" TYPE FILE FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/build/ouster-ros/catkin_generated/installspace/ouster_ros-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros/cmake" TYPE FILE FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/build/ouster-ros/catkin_generated/installspace/ouster_ros-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/include/ouster_ros")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/include/ouster_ros")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/share/roseus/ros/ouster_ros")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/share/roseus/ros/ouster_ros")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/share/common-lisp/ros/ouster_ros")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/share/common-lisp/ros/ouster_ros")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/share/gennodejs/ros/ouster_ros")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/share/gennodejs/ros/ouster_ros")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/home/stapler/anaconda3/bin/python3" -m compileall "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/python3/dist-packages/ouster_ros")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/python3/dist-packages/ouster_ros")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/python3/dist-packages/ouster_ros")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/python3/dist-packages/ouster_ros")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/build/ouster-ros/catkin_generated/installspace/ouster_ros.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/build/ouster-ros/catkin_generated/installspace/ouster_ros.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros/cmake" TYPE FILE FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/build/ouster-ros/catkin_generated/installspace/ouster_ros-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros/cmake" TYPE FILE FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/build/ouster-ros/catkin_generated/installspace/ouster_ros-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros/cmake" TYPE FILE FILES
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/build/ouster-ros/catkin_generated/installspace/ouster_rosConfig.cmake"
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/build/ouster-ros/catkin_generated/installspace/ouster_rosConfig-version.cmake"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/build/ouster-ros/catkin_generated/installspace/ouster_rosConfig.cmake"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/build/ouster-ros/catkin_generated/installspace/ouster_rosConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros" TYPE FILE FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros" TYPE FILE FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -103,7 +103,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libouster_ros.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/libouster_ros.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/libouster_ros.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libouster_ros.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libouster_ros.so")
     file(RPATH_CHANGE
@@ -126,12 +126,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnodelets_os.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/libnodelets_os.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/libnodelets_os.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnodelets_os.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnodelets_os.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnodelets_os.so"
-         OLD_RPATH "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libnodelets_os.so")
@@ -144,23 +144,23 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ouster_ros" TYPE DIRECTORY FILES
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/include"
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/ouster-sdk/ouster_client/include"
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/ouster-sdk/ouster_client/include/optional-lite"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/include"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/ouster-sdk/ouster_client/include"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/ouster-sdk/ouster_client/include/optional-lite"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros" TYPE FILE FILES
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/LICENSE"
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/nodelets_os.xml"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/LICENSE"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/nodelets_os.xml"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ouster_ros" TYPE DIRECTORY FILES
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/launch"
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/config"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/launch"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/config"
     )
 endif()
 

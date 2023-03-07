@@ -1,8 +1,8 @@
-# Install script for directory: /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/ouster-sdk/ouster_client
+# Install script for directory: /home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/ouster-sdk/ouster_client
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/install")
+  set(CMAKE_INSTALL_PREFIX "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,13 +38,13 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/libouster_client.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/libouster_client.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/ouster-sdk/ouster_client/include/ouster"
-    "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros/ouster-sdk/ouster_client/include/optional-lite"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/ouster-sdk/ouster_client/include/ouster"
+    "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/ouster-sdk/ouster_client/include/optional-lite"
     )
 endif()
 

@@ -1,5 +1,5 @@
 % Directory of .pcd scan files
-pcd_dir = "/home/stapler/Desktop/Scans"; 
+pcd_dir = "/home/stapler1/Desktop/Scans"; 
 
 % Gets all scan file names 
 pcd_names = listdir(pcd_dir);

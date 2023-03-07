@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/libouster_ros.pdb"
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/libouster_ros.so"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/libouster_ros.pdb"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/libouster_ros.so"
   "CMakeFiles/ouster_ros.dir/src/os_ros.cpp.o"
 )
 

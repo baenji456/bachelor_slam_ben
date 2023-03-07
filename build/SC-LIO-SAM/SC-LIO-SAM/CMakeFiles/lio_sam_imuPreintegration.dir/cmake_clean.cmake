@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/lio_sam/lio_sam_imuPreintegration"
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/lio_sam/lio_sam_imuPreintegration.pdb"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/lio_sam/lio_sam_imuPreintegration"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/lio_sam/lio_sam_imuPreintegration.pdb"
   "CMakeFiles/lio_sam_imuPreintegration.dir/src/imuPreintegration.cpp.o"
 )
 

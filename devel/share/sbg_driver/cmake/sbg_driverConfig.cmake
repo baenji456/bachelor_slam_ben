@@ -67,14 +67,14 @@ set(sbg_driver_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(sbg_driver_SOURCE_PREFIX /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/sbg_ros_driver)
-  set(sbg_driver_DEVEL_PREFIX /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel)
+  set(sbg_driver_SOURCE_PREFIX /home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/sbg_ros_driver)
+  set(sbg_driver_DEVEL_PREFIX /home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel)
   set(sbg_driver_INSTALL_PREFIX "")
   set(sbg_driver_PREFIX ${sbg_driver_DEVEL_PREFIX})
 else()
   set(sbg_driver_SOURCE_PREFIX "")
   set(sbg_driver_DEVEL_PREFIX "")
-  set(sbg_driver_INSTALL_PREFIX /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/install)
+  set(sbg_driver_INSTALL_PREFIX /home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/install)
   set(sbg_driver_PREFIX ${sbg_driver_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(sbg_driver_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/include;/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/sbg_ros_driver/src " STREQUAL " ")
+if(NOT "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/include;/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/sbg_ros_driver/src " STREQUAL " ")
   set(sbg_driver_INCLUDE_DIRS "")
-  set(_include_dirs "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/include;/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/sbg_ros_driver/src")
+  set(_include_dirs "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/include;/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/sbg_ros_driver/src")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/sbg_driver " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/deve
         message(FATAL_ERROR "Project 'sbg_driver' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'sbg_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/sbg_ros_driver/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'sbg_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/sbg_ros_driver/${idir}'.  ${_report}")
     endif()
     _list_append_unique(sbg_driver_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

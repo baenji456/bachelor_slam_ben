@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/lio_sam/lio_sam_mapOptmization"
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/lio_sam/lio_sam_mapOptmization.pdb"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/lio_sam/lio_sam_mapOptmization"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/lio_sam/lio_sam_mapOptmization.pdb"
   "CMakeFiles/lio_sam_mapOptmization.dir/src/Scancontext.cpp.o"
   "CMakeFiles/lio_sam_mapOptmization.dir/src/mapOptmization.cpp.o"
 )

@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/install")
+  set(CMAKE_INSTALL_PREFIX "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

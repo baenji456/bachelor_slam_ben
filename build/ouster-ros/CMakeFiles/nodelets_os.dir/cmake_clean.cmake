@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/libnodelets_os.pdb"
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/libnodelets_os.so"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/libnodelets_os.pdb"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/libnodelets_os.so"
   "CMakeFiles/nodelets_os.dir/src/os_client_base_nodelet.cpp.o"
   "CMakeFiles/nodelets_os.dir/src/os_cloud_nodelet.cpp.o"
   "CMakeFiles/nodelets_os.dir/src/os_image_nodelet.cpp.o"
