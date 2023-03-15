@@ -20,7 +20,7 @@ lio_sam:
   
   # Export settings
   savePCD: true                              # https://github.com/TixiaoShan/LIO-SAM/issues/3
-  savePCDDirectory: "/home/stapler/Desktop/"  # use global path, and end with "/" 
+  savePCDDirectory: "/home/stapler1/Desktop/"  # use global path, and end with "/" 
     # warning: if you have already data in the above savePCDDirectory, it will all remove and remake them. Thus, backup is recommended if pre-made data exist. 
 
   # Sensor Settings
@@ -29,7 +29,7 @@ lio_sam:
   Horizon_SCAN: 1024                        # lidar horizontal resolution (Velodyne:1800, Ouster:512,1024,2048)
   downsampleRate: 1                         # default: 1. Downsample your data if too many points. i.e., 16 = 64 / 4, 16 = 16 / 1
   lidarMinRange: 0.3                        # default: 1.0, minimum lidar range to be used #0.3
-  lidarMaxRange: 60.0 #60.0                     # default: 1000.0, maximum lidar range to be used
+  lidarMaxRange: 20.0 #60.0                     # default: 1000.0, maximum lidar range to be used
 
   # IMU Settings
   imuAccNoise: 8.9261620620134947e-03         #8.8343289076614900e-03     #MulRan #0.009939570888238808e-03
@@ -54,16 +54,21 @@ lio_sam:
   #                 0, 1, 0,
   #                 0, 0, 1]
 
-  # LOAM feature threshold
-  edgeThreshold: 1.0
-  surfThreshold: 0.1
-  edgeFeatureMinValidNum: 10
-  surfFeatureMinValidNum: 100
+  # LOAM feature threshold --> c WERT (siehe LOAM.pdf)
+  # c wert -> roughness (LIO-SAM) 
+  edgeThreshold: 1.0 #wenn c über threshold -> Kante
+  surfThreshold: 0.1 #wenn c über threshold -> Fläche
+  edgeFeatureMinValidNum: 10 # in einer subregion kann es nur X edge punkte geben
+  surfFeatureMinValidNum: 100 #in einer subregion kann es nur X flächepunkte geben
 
-  # voxel filter params 
-  odometrySurfLeafSize: 0.4               # default: 0.4 - outdoor, 0.2 - indoor  (leafSize = Größe der dargestellten Voxel)
-  mappingCornerLeafSize: 0.2              # default: 0.2 - outdoor, 0.1 - indoor
-  mappingSurfLeafSize: 0.4                # default: 0.4 - outdoor, 0.2 - indoor
+  # voxel filter params --> am wichtigsten für outdoor-indoor wechsel #ben
+  # voxelfilter wird genutzt um pointclouds downzusampeln (leafSize = Größe der dargestellten Voxel)
+  # https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/voxel-grid-filter-design.html
+  # voxel -> 3d box -> alle punkte in dieser Box werden gemittelt und so der Mittelunkt des voxels ermittelt
+  # voxelmap für planare und edge features -> unterschiedliche leafsizes
+  odometrySurfLeafSize: 0.1               # default: 0.4 - outdoor, 0.2 - indoor  
+  mappingCornerLeafSize: 0.05              # default: 0.2 - outdoor, 0.1 - indoor
+  mappingSurfLeafSize: 0.1                # default: 0.4 - outdoor, 0.2 - indoor
 
   # robot motion constraint (in case you are using a 2D robot)
   z_tollerance: 1000                            # meters
@@ -74,26 +79,36 @@ lio_sam:
   mappingProcessInterval: 0.15      # seconds, regulate mapping frequency #wie oft wird lidar zum referenzieren genutzt
 
   # Surrounding map
+  # Nach wieviel m und ard wird neuer keyframe hinzugefügt
+  # jeden lidar frame zu nutzen wäre rechnerisch schwer lösbar -> daher keyframe selection (siehe LIO-SAM)
+  # schafft balance zischen Rechenintesität und Punktdichte der Karte -> mehr rechenleistung kleinerer threshold möglich
   surroundingkeyframeAddingDistThreshold: 1.0   # meters, regulate keyframe adding threshold
   surroundingkeyframeAddingAngleThreshold: 0.2  # radians, regulate keyframe adding threshold
+# TODO--------
   surroundingKeyframeDensity: 2.0               # meters, downsample surrounding keyframe poses   
   surroundingKeyframeSearchRadius: 50.0         # meters, within n meters scan-to-map optimization (when loop closure disabled)
 
   # Loop closure
   loopClosureEnableFlag: true #LC ist EIN
-  loopClosureFrequency: 5.0 #5 Campus                       # Frequenz um loop closure Bedingungen zu regulieren # Hz, regulate loop closure constraint add frequency
-  surroundingKeyframeSize: 100 #100                   # Größe der Teilkarte, wenn loop closure aktiviert ist # submap size (when loop closure enabled)
-  historyKeyframeSearchRadius: 12 #10 Campus       # alles was sich innerhalb von n Meter von der aktuellen Pose befindet wird für den loop closure berücksichtigt #meters, key frame that is within n meters from current pose will be considerd for loop closure
-  historyKeyframeSearchTimeDiff: 10 #30.0 Campus      # alles was älter als n Sekunden ist wird für den loop closure berücksichtigt # seconds, key frame that is n seconds older will be considered for loop closure
-  historyKeyframeSearchNum: 20 #15                  # Anzahl vergangener key frames wird für den loop closure in einer Teilkarte zusammen gepackt # number of history key frames will be fused into a submap for loop closure
-  historyKeyframeFitnessScore: 0.05  #war default 0.3, hatte es aber auf 0.05            # icp Grenzwert, je kleiner desto besser die Ausrichtung/Zuordnung # icp threshold, the smaller the better alignment
+  loopClosureFrequency: 5.0 #5 Campus
+  # Frequenz um loop closure Bedingungen zu regulieren # Hz, regulate loop closure constraint add frequency
+  surroundingKeyframeSize: 100 #100
+  # Größe der Teilkarte, wenn loop closure aktiviert ist # submap size (when loop closure enabled)
+  historyKeyframeSearchRadius: 5 #10 Campus
+  # alles was sich innerhalb von n Meter von der aktuellen Pose befindet wird für den loop closure berücksichtigt #meters, key frame that is within n meters from current pose will be considerd for loop closure
+  # GEDANKE: kleinere Räume -> kleinerer Radius benötigt (ben)
+  historyKeyframeSearchTimeDiff: 10 #30.0 Campus
+  # alles was älter als n Sekunden ist wird für den loop closure berücksichtigt # seconds, key frame that is n seconds older will be considered for loop closure
+  # vielleicht auf für labor höher stellen (ben)
+  historyKeyframeSearchNum: 20 #15
+  # Anzahl vergangener key frames wird für den loop closure in einer Teilkarte zusammen gepackt # number of history key frames will be fused into a submap for loop closure
+  historyKeyframeFitnessScore: 0.3  #war default 0.3, hatte es aber auf 0.05
+  # icp Grenzwert, je kleiner desto besser die Ausrichtung/Zuordnung # icp threshold, the smaller the better alignment
 
   # Visualization
   globalMapVisualizationSearchRadius: 1000.0 #50.0 #1000.0    # meters, global map visualization radius
   globalMapVisualizationPoseDensity: 10.0       # meters, global map visualization keyframe density
-  globalMapVisualizationLeafSize: 0.2           # meters, global map visualization cloud density
-
-
+  globalMapVisualizationLeafSize: 0.1           # meters, global map visualization cloud density
 
 
 # Navsat (convert GPS coordinates to Cartesian)
