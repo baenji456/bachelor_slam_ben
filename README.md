@@ -10,7 +10,13 @@ Für weitere Dokumentation siehe die Bachelorarbeit von Pfannes, Lennard sowie h
 * **SBG IMU Treiber** https://github.com/SBG-Systems/sbg_ros_driver
 
 # How to use
-Die Schritte werden jeweils in unterschiedlichen Terminals ausgeführt
+```console
+git clone https://github.com/baenji456/bachelor_slam_ben.git
+cd bachelor_slam_ben
+catkin_make
+```
+Alle folgenden Schritte werden in unterschiedlichen Terminals ausgeführt
+## Variante A: Live
 1. Ouster Treiber starten
 ```console
 source devel/setup.bash
@@ -25,6 +31,17 @@ roslaunch sbg_driver sbg_device.launch
 ```console
 source devel/setup.bash
 roslaunch lio_sam run.launch
+```
+## Variante B: Mit Bagfiles
+1. SC-LIO-SAM starten
+```console
+source devel/setup.bash
+roslaunch lio_sam run.launch
+```
+2. Bagfile abspielen
+```console
+source devel/setup.bash
+rosbag play <path/to/your/bagfile>
 ```
 
 # Parameter
