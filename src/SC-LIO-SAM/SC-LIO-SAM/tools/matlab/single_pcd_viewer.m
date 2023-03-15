@@ -1,5 +1,5 @@
 % Directory of .pcd scan files
-pcd_dir = "/home/stapler/Desktop"; 
+pcd_dir = "/home/stapler1/Desktop"; 
 
 
 

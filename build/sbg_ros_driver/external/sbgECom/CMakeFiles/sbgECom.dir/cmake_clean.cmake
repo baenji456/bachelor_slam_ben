@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/libsbgECom.a"
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/libsbgECom.pdb"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/libsbgECom.a"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/libsbgECom.pdb"
   "CMakeFiles/sbgECom.dir/common/crc/sbgCrc.c.o"
   "CMakeFiles/sbgECom.dir/common/interfaces/sbgInterface.c.o"
   "CMakeFiles/sbgECom.dir/common/interfaces/sbgInterfaceFile.c.o"

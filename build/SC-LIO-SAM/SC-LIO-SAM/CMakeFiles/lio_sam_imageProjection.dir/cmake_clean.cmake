@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/lio_sam/lio_sam_imageProjection"
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/lio_sam/lio_sam_imageProjection.pdb"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/lio_sam/lio_sam_imageProjection"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/lio_sam/lio_sam_imageProjection.pdb"
   "CMakeFiles/lio_sam_imageProjection.dir/src/imageProjection.cpp.o"
 )
 

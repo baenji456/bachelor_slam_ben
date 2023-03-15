@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/sbg_driver/sbg_device_mag"
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/sbg_driver/sbg_device_mag.pdb"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/sbg_driver/sbg_device_mag"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/sbg_driver/sbg_device_mag.pdb"
   "CMakeFiles/sbg_device_mag.dir/src/config_applier.cpp.o"
   "CMakeFiles/sbg_device_mag.dir/src/config_store.cpp.o"
   "CMakeFiles/sbg_device_mag.dir/src/main_mag.cpp.o"

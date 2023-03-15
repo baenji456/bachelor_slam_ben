@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/install")
+  set(CMAKE_INSTALL_PREFIX "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/build/gtest/googletest/cmake_install.cmake")
+  include("/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/build/gtest/googletest/cmake_install.cmake")
 
 endif()
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/share/roseus/ros/lio_sam/manifest.l"
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/share/roseus/ros/lio_sam/msg/cloud_info.l"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/share/roseus/ros/lio_sam/manifest.l"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/share/roseus/ros/lio_sam/msg/cloud_info.l"
   "CMakeFiles/lio_sam_generate_messages_eus"
 )
 

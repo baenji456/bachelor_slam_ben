@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/include/lio_sam/cloud_info.h"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/include/lio_sam/cloud_info.h"
   "CMakeFiles/lio_sam_generate_messages_cpp"
 )
 

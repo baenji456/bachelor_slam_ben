@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/libouster_client.a"
-  "/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel/lib/libouster_client.pdb"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/libouster_client.a"
+  "/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/lib/libouster_client.pdb"
   "CMakeFiles/ouster_client.dir/src/buffered_udp_source.cpp.o"
   "CMakeFiles/ouster_client.dir/src/client.cpp.o"
   "CMakeFiles/ouster_client.dir/src/image_processing.cpp.o"

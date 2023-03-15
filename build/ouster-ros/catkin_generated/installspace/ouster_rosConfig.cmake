@@ -67,14 +67,14 @@ set(ouster_ros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ouster_ros_SOURCE_PREFIX /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/src/ouster-ros)
-  set(ouster_ros_DEVEL_PREFIX /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/devel)
+  set(ouster_ros_SOURCE_PREFIX /home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros)
+  set(ouster_ros_DEVEL_PREFIX /home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel)
   set(ouster_ros_INSTALL_PREFIX "")
   set(ouster_ros_PREFIX ${ouster_ros_DEVEL_PREFIX})
 else()
   set(ouster_ros_SOURCE_PREFIX "")
   set(ouster_ros_DEVEL_PREFIX "")
-  set(ouster_ros_INSTALL_PREFIX /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/install)
+  set(ouster_ros_INSTALL_PREFIX /home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/install)
   set(ouster_ros_PREFIX ${ouster_ros_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

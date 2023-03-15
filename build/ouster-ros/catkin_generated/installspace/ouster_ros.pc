@@ -1,4 +1,4 @@
-prefix=/home/stapler/benni_workspace_ba/pfannes_ba/SC-LIO-SAM-main_working/install
+prefix=/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/install
 
 Name: ouster_ros
 Description: Description of ouster_ros
