@@ -1,8 +1,0 @@
-prefix=/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel
-
-Name: ouster_ros
-Description: Description of ouster_ros
-Version: 0.7.4
-Cflags: -I/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/devel/include -I/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/include -I/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/ouster-sdk/ouster_client/include -I/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/src/ouster-ros/ouster-sdk/ouster_client/include/optional-lite -I/usr/include/eigen3
-Libs: -L${prefix}/lib -louster_ros
-Requires: roscpp message_runtime std_msgs sensor_msgs geometry_msgs
