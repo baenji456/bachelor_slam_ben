@@ -1,0 +1,17 @@
+digraph G {
+"gps" -> "navsat_link"[label="Broadcaster: /navsat_link_to_gps_broadcaster\nAverage rate: 89.867 Hz\nMost recent transform: 1679304130.447 ( -0.009 sec old)\nBuffer length: 4.907 sec\n"];
+"base_link" -> "gps"[label="Broadcaster: /gps_transform\nAverage rate: 93.376 Hz\nMost recent transform: 1679304130.443 ( -0.006 sec old)\nBuffer length: 4.916 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /lio_sam_imuPreintegration\nAverage rate: 82.978 Hz\nMost recent transform: 1678187078.954 ( 1117051.483 sec old)\nBuffer length: 4.760 sec\n"];
+"base_link" -> "imu_link"[label="Broadcaster: /imu_transform\nAverage rate: 89.324 Hz\nMost recent transform: 1679304130.446 ( -0.008 sec old)\nBuffer length: 4.915 sec\n"];
+"base_link" -> "os_sensor"[label="Broadcaster: /lidar2sensor\nAverage rate: 89.718 Hz\nMost recent transform: 1679304130.444 ( -0.006 sec old)\nBuffer length: 4.860 sec\n"];
+"base_link" -> "chassis_link"[label="Broadcaster: /play_1679303695739375817\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1679304130.438 sec old)\nBuffer length: 0.000 sec\n"];
+"chassis_link" -> "velodyne"[label="Broadcaster: /play_1679303695739375817\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1679304130.438 sec old)\nBuffer length: 0.000 sec\n"];
+"os_sensor" -> "os_lidar"[label="Broadcaster: /play_1679303695739375817\nAverage rate: 5.208 Hz\nMost recent transform: 1678187078.854 ( 1117051.583 sec old)\nBuffer length: 4.800 sec\n"];
+"os_sensor" -> "os_imu"[label="Broadcaster: /play_1679303695739375817\nAverage rate: 45.788 Hz\nMost recent transform: 1678187078.991 ( 1117051.447 sec old)\nBuffer length: 4.805 sec\n"];
+"map" -> "odom"[label="Broadcaster: /lio_sam_imuPreintegration\nAverage rate: 82.978 Hz\nMost recent transform: 1678187078.954 ( 1117051.483 sec old)\nBuffer length: 4.760 sec\n"];
+"odom" -> "lidar_link"[label="Broadcaster: /lio_sam_mapOptmization\nAverage rate: 2.979 Hz\nMost recent transform: 1678187077.554 ( 1117052.883 sec old)\nBuffer length: 4.700 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1679304130.438"[ shape=plaintext ] ;
+ }->"map";
+}

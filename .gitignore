@@ -1,4 +1,7 @@
 build/
 devel/
 .vscode/
+logs/
+
+#ignore all bagfiles
 *.bag

@@ -1,7 +1,10 @@
 <launch>
 
     <arg name="project" default="lio_sam"/>
-    
+
+    <!-- true, wenn rosbag genutzt wird-->
+    <!-- <param name ="/use_sim_time" value="true"/> -->
+
     <!-- Parameters -->
     <rosparam file="$(find lio_sam)/config/params_liosam.yaml" command="load" />
 

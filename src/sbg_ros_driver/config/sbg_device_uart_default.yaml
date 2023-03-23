@@ -17,7 +17,7 @@ uartConf:
   portName: "/dev/ttyUSB0"
 
   # Baude rate (4800 ,9600 ,19200 ,38400 ,115200 [default],230400 ,460800 ,921600)
-  baudRate: 115200
+  baudRate: 921600
 
   # Port Id
   # 0 PORT_A: Main communication interface. Full duplex.
@@ -246,12 +246,12 @@ output:
   #
   # true : ENU convention (X east, Y north, Z up)
   # false (default): NED convention (X north, Y east, Z down)
-  use_enu: false
+  use_enu: true
 
   # Frame ID:
   # Note: If the frame convention is NED so the default frame ID is (imu_link_ned)
   #       else if the convention is ENU so the default frame ID is (imu_link)
-  frame_id: "imu_link_ned"
+  frame_id: "imu_link"
 
   # Status general, clock, com aiding, solution, heave
   log_status: 200

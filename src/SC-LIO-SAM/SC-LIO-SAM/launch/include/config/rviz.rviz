@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /links1
         - /links1/TF1
         - /links1/TF1/Frames1
         - /links1/base_link1
@@ -35,34 +36,10 @@ Visualization Manager:
     - Class: rviz/Group
       Displays:
         - Class: rviz/TF
-          Enabled: true
+          Enabled: false
           Frame Timeout: 999
           Frames:
             All Enabled: false
-            base_link:
-              Value: true
-            chassis_link:
-              Value: false
-            gps:
-              Value: false
-            imu_link:
-              Value: false
-            lidar_link:
-              Value: false
-            map:
-              Value: false
-            navsat_link:
-              Value: false
-            odom:
-              Value: false
-            os_imu:
-              Value: false
-            os_lidar:
-              Value: false
-            os_sensor:
-              Value: false
-            velodyne:
-              Value: false
           Marker Alpha: 1
           Marker Scale: 3
           Name: TF
@@ -70,23 +47,9 @@ Visualization Manager:
           Show Axes: true
           Show Names: true
           Tree:
-            map:
-              odom:
-                base_link:
-                  chassis_link:
-                    velodyne:
-                      {}
-                  gps:
-                    navsat_link:
-                      {}
-                  imu_link:
-                    {}
-                  os_sensor:
-                    {}
-                lidar_link:
-                  {}
+            {}
           Update Interval: 0
-          Value: true
+          Value: false
         - Alpha: 1
           Class: rviz/Axes
           Enabled: false
@@ -98,13 +61,13 @@ Visualization Manager:
           Value: false
         - Alpha: 1
           Class: rviz/Axes
-          Enabled: false
+          Enabled: true
           Length: 0.5
           Name: base_link
           Radius: 0.10000000149011612
           Reference Frame: base_link
           Show Trail: false
-          Value: false
+          Value: true
       Enabled: true
       Name: links
     - Class: rviz/Group
