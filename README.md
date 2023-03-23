@@ -25,7 +25,7 @@ roslaunch ouster_ros sensor.launch
 2. SBG IMU Treiber starten
 ```console
 source devel/setup.bash
-roslaunch sbg_driver sbg_device.launch
+roslaunch sbg_driver sbg_ellipseD.launch
 ```
 3. SC-LIO-SAM starten
 ```console
@@ -43,17 +43,3 @@ roslaunch lio_sam run.launch
 source devel/setup.bash
 rosbag play <path/to/your/bagfile>
 ```
-
-# Parameter
-Die Paramter des SC-LIO-SAM Packages sind in der Datei params_liosam.yaml zu finden. (LINK EINFÜGEN)
-Es gibt zwei Arten von Parametern, diese werden im Folgenden Einrichtungsparameter und Anpassungsparameter genannt. Einrichtungparameter sind Parameter, die für einen bestimmten Aufbau oder ein bestimmtes Projekt nur einmal angepasst werden müssen. Um einen Aufbau für verschiedene Anwendungen zu optimieren können Anpassungsparameter verändert werden.
-## Einrichtungsparameter
-1. **Topics**: Namen bestimmter Topics, die von LiDAR und IMU gesendet und von SC_LIO_SAM verwendet werden
-2. **Frames**: Benennung der verschiedenen Frames 
-3. **GPS Settings**: Aktivierung von useImuHeadingInitialization, wenn GPS genutzt werden soll
-4. **Export Settings**: Speicherort für PCD Dateien
-5. **Sensor Settings**: Angaben zu genutzten LiDAR Sensor Typ
-6. **IMU Settings**: Angaben zu Noise und Bias der IMU, müssen vorherbestimmt werden
-7. **Extrinsics**: Abstände zwischen LiDAR und IMU
-8. **CPU Params**: Anzahl der Cores
-## Anpassungsparameter
