@@ -30,6 +30,7 @@ public:
 
     ros::Publisher pubImuOdometry;
     ros::Publisher pubImuPath;
+    ros::Publisher pubTFodom2base;
 
     Eigen::Affine3f lidarOdomAffine;
     Eigen::Affine3f imuOdomAffineFront;
@@ -49,7 +50,7 @@ public:
             {
                 tfListener.waitForTransform(lidarFrame, baselinkFrame, ros::Time(0), ros::Duration(3.0));
                 tfListener.lookupTransform(lidarFrame, baselinkFrame, ros::Time(0), lidar2Baselink);
-            }
+            }   
             catch (tf::TransformException ex)
             {
                 ROS_ERROR("%s",ex.what());
@@ -61,6 +62,7 @@ public:
 
         pubImuOdometry   = nh.advertise<nav_msgs::Odometry>(odomTopic, 2000);
         pubImuPath       = nh.advertise<nav_msgs::Path>    ("lio_sam/imu/path", 1);
+        pubTFodom2base   = nh.advertise<geometry_msgs::PoseStamped>("pose/base_link", 10);
     }
 
     Eigen::Affine3f odom2affine(nav_msgs::Odometry odom)
@@ -128,6 +130,22 @@ public:
             tCur = tCur * lidar2Baselink;
         tf::StampedTransform odom_2_baselink = tf::StampedTransform(tCur, odomMsg->header.stamp, odometryFrame, baselinkFrame);
         tfOdom2BaseLink.sendTransform(odom_2_baselink);
+    
+        // publish odom to base_link as PoseStamped
+        geometry_msgs::PoseStamped msg;
+        msg.header.stamp = odom_2_baselink.stamp_;
+        msg.header.frame_id = odom_2_baselink.frame_id_;
+
+        msg.pose.position.x = odom_2_baselink.getOrigin().x();
+        msg.pose.position.y = odom_2_baselink.getOrigin().y();
+        msg.pose.position.z = odom_2_baselink.getOrigin().z();
+
+        msg.pose.orientation.x = odom_2_baselink.getRotation().x();
+        msg.pose.orientation.y = odom_2_baselink.getRotation().y();
+        msg.pose.orientation.z = odom_2_baselink.getRotation().z();
+        msg.pose.orientation.w = odom_2_baselink.getRotation().w();
+
+        pubTFodom2base.publish(msg);
 
         // publish IMU path
         static nav_msgs::Path imuPath;
