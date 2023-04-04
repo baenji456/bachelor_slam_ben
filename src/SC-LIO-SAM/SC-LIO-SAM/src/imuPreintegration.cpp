@@ -30,7 +30,7 @@ public:
 
     ros::Publisher pubImuOdometry;
     ros::Publisher pubImuPath;
-    ros::Publisher pubTFodom2base;
+    ros::Publisher pubTFodom2base; //BEN
 
     Eigen::Affine3f lidarOdomAffine;
     Eigen::Affine3f imuOdomAffineFront;
@@ -62,7 +62,8 @@ public:
 
         pubImuOdometry   = nh.advertise<nav_msgs::Odometry>(odomTopic, 2000);
         pubImuPath       = nh.advertise<nav_msgs::Path>    ("lio_sam/imu/path", 1);
-        pubTFodom2base   = nh.advertise<geometry_msgs::PoseStamped>("pose/base_link", 10);
+        pubTFodom2base   = nh.advertise<geometry_msgs::PoseStamped>("pose/odom2base", 10); //BEN
+        
     }
 
     Eigen::Affine3f odom2affine(nav_msgs::Odometry odom)
@@ -130,8 +131,11 @@ public:
             tCur = tCur * lidar2Baselink;
         tf::StampedTransform odom_2_baselink = tf::StampedTransform(tCur, odomMsg->header.stamp, odometryFrame, baselinkFrame);
         tfOdom2BaseLink.sendTransform(odom_2_baselink);
-    
+
+        //BEN
         // publish odom to base_link as PoseStamped
+
+
         geometry_msgs::PoseStamped msg;
         msg.header.stamp = odom_2_baselink.stamp_;
         msg.header.frame_id = odom_2_baselink.frame_id_;
@@ -146,6 +150,7 @@ public:
         msg.pose.orientation.w = odom_2_baselink.getRotation().w();
 
         pubTFodom2base.publish(msg);
+        //END BEN
 
         // publish IMU path
         static nav_msgs::Path imuPath;
