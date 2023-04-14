@@ -134,8 +134,6 @@ public:
 
         //BEN
         // publish odom to base_link as PoseStamped
-
-
         geometry_msgs::PoseStamped msg;
         msg.header.stamp = odom_2_baselink.stamp_;
         msg.header.frame_id = odom_2_baselink.frame_id_;

@@ -5,37 +5,27 @@
     <env name="ROSCONSOLE_CONFIG_FILE" value="$(find lio_sam)/launch/include/rosconsole/rosconsole_error.conf"/>
 
 
-    <!--  Transforms -->
+    <!--  Transforms 
     <node pkg="tf" type="static_transform_publisher"
         name="gps_transform"
-        args="0 0 0 0 0 0 base_link gps 10" />
+        args="0 0 0 0 0 0 base_link gps 10" />-->
 
     <!--  Setup Holzbrett -->
-    <!--<node pkg="tf" type="static_transform_publisher"
-            name="imu_transform"
-            args="0.04 -0.19 -0.04935 0 0 0 1 base_link imu_link 10" /> -->
-
-    <!-- Test Setup Stapler -->
     <node pkg="tf" type="static_transform_publisher"
             name="imu_transform"
             args="0.04 -0.19 -0.04935 0 0 0 1 lidar_link imu_link 10" />
 
     <node pkg="tf" type="static_transform_publisher"
             name="lidar_transform"
-            args="0 0 0 0 0 0 1 base_link lidar_link 10" />
+            args="3 3 3 0 0 0 1 base_link lidar_link 10" />
 
     <node pkg="tf" type="static_transform_publisher"
             name="spitze_transform"
-            args="2 0 -2 0 0 0 1 base_link spitze_link 10" />
-            
-    <!--  Setup Rollwagen -->
-    <!-- <node pkg="tf" type="static_transform_publisher"
-            name="imu_transform"
-            args="0.0787 -0.5004 -0.04935 0 0 0 1 base_link imu_link 10" /> -->
+            args="0 0 0 0 0 0 1 base_link spitze_link 10" />
 
-    <node pkg="tf" type="static_transform_publisher" 
+    <!--<node pkg="tf" type="static_transform_publisher" 
         name="navsat_link_to_gps_broadcaster" 
-        args="0 0 0 0 0 0 1 gps navsat_link 10" /> 
+        args="0 0 0 0 0 0 1 gps navsat_link 10" /> -->
  
     
     <!-- EKF GPS-->
@@ -69,7 +59,7 @@
     <!-- manually transformation to test the tf problems in rviz -->
     <!-- <node pkg="tf" type="static_transform_publisher" name="base2sensor" args="0 0 0 0 0 0 1 base_link lidar_link 10" /> -->
     <!-- <node pkg="tf" type="static_transform_publisher" name="lidar2sensor" args="0 0 0 0 0 0 1 lidar_link os_sensor 10" /> -->
-    <node pkg="tf" type="static_transform_publisher" name="lidar2sensor" args="0 0 0 0 0 0 1 base_link os_sensor 10" />
+    <!--<node pkg="tf" type="static_transform_publisher" name="lidar2sensor" args="0 0 0 0 0 0 1 base_link os_sensor 10" />-->
     <!-- <node pkg="tf" type="static_transform_publisher" name="map2odom" args="0 0 0 0 0 0 1 map odom 10" /> -->
 
 </launch>

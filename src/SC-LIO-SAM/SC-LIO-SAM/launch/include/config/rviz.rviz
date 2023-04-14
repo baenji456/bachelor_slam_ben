@@ -7,6 +7,7 @@ Panels:
         - /Global Options1
         - /links1
         - /links1/TF1
+        - /links1/TF1/Status1
         - /links1/TF1/Frames1
         - /links1/base_link1
         - /Odometry1
@@ -40,10 +41,26 @@ Visualization Manager:
     - Class: rviz/Group
       Displays:
         - Class: rviz/TF
-          Enabled: false
+          Enabled: true
           Frame Timeout: 999
           Frames:
-            All Enabled: false
+            All Enabled: true
+            base_link:
+              Value: true
+            chassis_link:
+              Value: true
+            imu_link:
+              Value: true
+            lidar_link:
+              Value: true
+            map:
+              Value: true
+            navsat_link:
+              Value: true
+            odom:
+              Value: true
+            velodyne:
+              Value: true
           Marker Alpha: 1
           Marker Scale: 3
           Name: TF
@@ -51,9 +68,18 @@ Visualization Manager:
           Show Axes: true
           Show Names: true
           Tree:
-            {}
+            map:
+              odom:
+                base_link:
+                  chassis_link:
+                    navsat_link:
+                      {}
+                    velodyne:
+                      {}
+                  imu_link:
+                    {}
           Update Interval: 0
-          Value: false
+          Value: true
         - Alpha: 1
           Class: rviz/Axes
           Enabled: false
@@ -521,7 +547,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 34.82046127319336
+      Distance: 3.422715902328491
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -537,9 +563,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.45539870858192444
+      Pitch: 0.6203985810279846
       Target Frame: lidar_link
-      Yaw: 4.803616523742676
+      Yaw: 5.603618621826172
     Saved:
       - Class: rviz/ThirdPersonFollower
         Distance: 93.42483520507812

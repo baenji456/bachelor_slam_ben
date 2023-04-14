@@ -51,9 +51,9 @@ class topic_listener:
         rospy.loginfo('udp_sender: subscriptions loaded')
 
     def callback_odom2base(self, data):
-        #stamp_sec = data.header.stamp.sec
-        #stamp_nsec = data.header.stamp.nsec
-        frame_id_bytes = bytes(data.header.frame_id, 'utf-8')
+        stamp_sec = data.header.stamp.secs
+        stamp_nsec = data.header.stamp.nsecs
+        #frame_id_bytes = bytes(data.header.frame_id, 'utf-8')
 
         x_trans = data.pose.position.x
         y_trans = data.pose.position.y
@@ -67,10 +67,14 @@ class topic_listener:
         try:
             transmission_check = random.randint(0, 99)
             data_send_tc = struct.pack('i', transmission_check)
-            #data_send_stamp = struct.pack("ii", stamp_sec, stamp_nsec)
-            data_send_frame = struct.pack("I%ds" % (len(frame_id_bytes),), len(frame_id_bytes), frame_id_bytes)
+            data_send_stamp = struct.pack("ii", stamp_sec, stamp_nsec)
+            #data_send_frame = struct.pack("I%ds" % (len(frame_id_bytes),), len(frame_id_bytes), frame_id_bytes)
             data_send_status = struct.pack('fffffff',x_trans, y_trans, z_trans, x_ori, y_ori, z_ori, w_ori)
-            data_send = data_send_tc + data_send_frame + data_send_status + data_send_tc
+            data_send = (data_send_tc 
+                         + data_send_stamp 
+                        # + data_send_frame
+                         + data_send_status 
+                         + data_send_tc)
             # rospy.loginfo('udp_msg_sender: v_set msg sent')
         except:
             rospy.loginfo('udp_msg_sender: problem with sending data')

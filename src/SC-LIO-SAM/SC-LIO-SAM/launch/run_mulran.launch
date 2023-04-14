@@ -16,13 +16,13 @@
 
     <!--- Run Rviz-->
     <include file="$(find lio_sam)/launch/include/module_rviz.launch" />
-<!--
+
     <node pkg="tf" type="static_transform_publisher" name="odom_base_link_transform" args="0 0 0 0 0 0 1 odom base_link 10" />
 
     <node pkg="tf" type="static_transform_publisher" name="imu_transform" args="0 0 0 0 0 0 1 imu imu_link 10" />
 
     <node pkg="tf" type="static_transform_publisher" name="navsat_link_to_gps_broadcaster" args="0 0 0 0 0 0 navsat_link gps 10" />
  
-     <node pkg="tf" type="static_transform_publisher" name="map_gps" args="0 0 0 0 0 0 map gps 10" /> -->
+     <node pkg="tf" type="static_transform_publisher" name="map_gps" args="0 0 0 0 0 0 map gps 10" />
 
 </launch>
