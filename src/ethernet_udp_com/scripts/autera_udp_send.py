@@ -26,11 +26,11 @@ class topic_listener:
         """
         # udp config -> sender needs to be specified in mab simulink software
         # sender config (lenovo e560 thab)
-        # self.UDP_IP = "192.168.1.2"
-        # self.UDP_PORT = 50100
-        # sender config (autera agv387 thab)
-        self.UDP_IP = "192.168.1.3"
+        self.UDP_IP = "192.168.1.8"
         self.UDP_PORT = 50100
+        # sender config (autera agv387 thab)
+        # self.UDP_IP = "192.168.1.3"
+        # self.UDP_PORT = 50100
         # receiver config (mab on agv387)
         self.UDP_IP_TARGET = "192.168.1.200"
         self.UDP_PORT_TARGET = 51200

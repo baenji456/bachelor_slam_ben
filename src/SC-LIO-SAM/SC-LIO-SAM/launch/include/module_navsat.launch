@@ -17,7 +17,7 @@
 
     <node pkg="tf" type="static_transform_publisher"
             name="lidar_transform"
-            args="3 3 3 0 0 0 1 base_link lidar_link 10" />
+            args="1 1 1 0 0 0 1 base_link lidar_link 10" />
 
     <node pkg="tf" type="static_transform_publisher"
             name="spitze_transform"
