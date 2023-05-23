@@ -13,15 +13,15 @@
     <!--  Setup Holzbrett -->
     <node pkg="tf" type="static_transform_publisher"
             name="imu_transform"
-            args="0.04 -0.19 -0.04935 0 0 0 1 lidar_link imu_link 10" />
+            args="0.04 -0.19 -0.04935 1 0 0 0 lidar_link imu_link 10" />
 
     <node pkg="tf" type="static_transform_publisher"
             name="lidar_transform"
-            args="1 1 1 0 0 0 1 base_link lidar_link 10" />
+            args="-0.9237 -0.03614 2.15784 0 0 -0.71 0.71 base_link lidar_link 10" /> <!-- YWERT CHECKEN-->
 
-    <node pkg="tf" type="static_transform_publisher"
+    <!-- <node pkg="tf" type="static_transform_publisher"
             name="spitze_transform"
-            args="0 0 0 0 0 0 1 base_link spitze_link 10" />
+            args="0 0 0 0 0 0 1 base_link spitze_link 10" /> -->
 
     <!--<node pkg="tf" type="static_transform_publisher" 
         name="navsat_link_to_gps_broadcaster" 

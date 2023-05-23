@@ -1,0 +1,14 @@
+<launch>
+
+    <arg name="project" default="all"/>
+
+    <!--- LIDAR -->
+    <include file="$(find ouster_ros)/launch/sensor.launch" />
+
+    <!--- IMU --> sbg_driver sbg_ellipseD.launch
+    <include file="$(find sbg_driver)/launch/examples/sbg_ellipseD.launch" />
+
+    <!--- LIO SAM -->
+    <include file="$(find lio_sam)/launch/run.launch" />
+
+</launch>

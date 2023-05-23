@@ -7,13 +7,13 @@ Panels:
         - /Global Options1
         - /links1
         - /links1/TF1
-        - /links1/TF1/Status1
         - /links1/TF1/Frames1
         - /links1/base_link1
         - /Odometry1
         - /Point Cloud1
         - /Mapping1
         - /Mapping1/Path (global)1
+        - /Grid1
       Splitter Ratio: 0.5735294222831726
     Tree Height: 604
   - Class: rviz/Selection
@@ -30,7 +30,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 2
-    SyncSource: Map (global)
+    SyncSource: ""
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -44,23 +44,21 @@ Visualization Manager:
           Enabled: true
           Frame Timeout: 999
           Frames:
-            All Enabled: true
+            All Enabled: false
             base_link:
               Value: true
             chassis_link:
-              Value: true
+              Value: false
             imu_link:
               Value: true
             lidar_link:
               Value: true
-            map:
-              Value: true
             navsat_link:
-              Value: true
-            odom:
-              Value: true
+              Value: false
+            spitze_link:
+              Value: false
             velodyne:
-              Value: true
+              Value: false
           Marker Alpha: 1
           Marker Scale: 3
           Name: TF
@@ -68,16 +66,17 @@ Visualization Manager:
           Show Axes: true
           Show Names: true
           Tree:
-            map:
-              odom:
-                base_link:
-                  chassis_link:
-                    navsat_link:
-                      {}
-                    velodyne:
-                      {}
-                  imu_link:
-                    {}
+            base_link:
+              chassis_link:
+                navsat_link:
+                  {}
+                velodyne:
+                  {}
+              lidar_link:
+                imu_link:
+                  {}
+              spitze_link:
+                {}
           Update Interval: 0
           Value: true
         - Alpha: 1
@@ -494,13 +493,13 @@ Visualization Manager:
           Use rainbow: true
           Value: false
         - Class: rviz/MarkerArray
-          Enabled: false
+          Enabled: true
           Marker Topic: /lio_sam/mapping/loop_closure_constraints
           Name: Loop constraint
           Namespaces:
             {}
           Queue Size: 100
-          Value: false
+          Value: true
       Enabled: true
       Name: Mapping
     - Alpha: 1
@@ -531,6 +530,24 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: false
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: lidar_link
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 0; 0; 0
@@ -547,7 +564,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 3.422715902328491
+      Distance: 10.126121520996094
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -555,17 +572,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 4.82499885559082
-        Y: -6.2653937339782715
-        Z: 4.651400089263916
+        X: -0.03148852288722992
+        Y: 0.002777099609375
+        Z: 0
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6203985810279846
+      Pitch: 1.0019960403442383
       Target Frame: lidar_link
-      Yaw: 5.603618621826172
+      Yaw: 3.246994972229004
     Saved:
       - Class: rviz/ThirdPersonFollower
         Distance: 93.42483520507812
