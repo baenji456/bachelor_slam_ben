@@ -4,7 +4,7 @@ import time
 
 # TODO argparse für abzuspielendes bagfile
 
-with open('param_setups.txt', 'r') as file:
+with open('files_for_testing/param_setups.txt', 'r') as file:
     for line in file:
         line_split = line.split()
 
@@ -49,6 +49,6 @@ with open('param_setups.txt', 'r') as file:
 
         filename = "LC_{}_KF_{}_VF_{}_LF_{}".format(LC, KF, VF, LF)
 
-        subprocess.run(['./start_lio_sam.sh', "labor_klein.bag", filename])
+        subprocess.run(['.files_for_testing/start_lio_sam.sh', "labor_klein.bag", filename])
         time.sleep(10)
-        subprocess.run(['./bag_to_csv.sh', filename])
+        subprocess.run(['.files_for_testing/bag_to_csv.sh', filename])
