@@ -56,7 +56,7 @@ Visualization Manager:
             navsat_link:
               Value: false
             spitze_link:
-              Value: false
+              Value: true
             velodyne:
               Value: false
           Marker Alpha: 1
@@ -66,17 +66,7 @@ Visualization Manager:
           Show Axes: true
           Show Names: true
           Tree:
-            base_link:
-              chassis_link:
-                navsat_link:
-                  {}
-                velodyne:
-                  {}
-              lidar_link:
-                imu_link:
-                  {}
-              spitze_link:
-                {}
+            {}
           Update Interval: 0
           Value: true
         - Alpha: 1

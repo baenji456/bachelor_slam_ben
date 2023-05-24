@@ -1,6 +1,7 @@
 #include "utility.h"
 
 #include <gtsam/geometry/Rot3.h>
+#include <gtsam/geometry/Point3.h>
 #include <gtsam/geometry/Pose3.h>
 #include <gtsam/slam/PriorFactor.h>
 #include <gtsam/slam/BetweenFactor.h>
@@ -31,6 +32,7 @@ public:
     ros::Publisher pubImuOdometry;
     ros::Publisher pubImuPath;
     ros::Publisher pubTFodom2base; //BEN
+    ros::Publisher pubTFodom2axis; //BEN
 
     Eigen::Affine3f lidarOdomAffine;
     Eigen::Affine3f imuOdomAffineFront;
@@ -63,6 +65,7 @@ public:
         pubImuOdometry   = nh.advertise<nav_msgs::Odometry>(odomTopic, 2000);
         pubImuPath       = nh.advertise<nav_msgs::Path>    ("lio_sam/imu/path", 1);
         pubTFodom2base   = nh.advertise<geometry_msgs::PoseStamped>("pose/odom2base", 10); //BEN
+        pubTFodom2axis   = nh.advertise<geometry_msgs::PoseStamped>("pose/odom2axis", 10); //BEN
         
     }
 
@@ -138,16 +141,64 @@ public:
         msg.header.stamp = odom_2_baselink.stamp_;
         msg.header.frame_id = odom_2_baselink.frame_id_;
 
-        msg.pose.position.x = odom_2_baselink.getOrigin().x();
-        msg.pose.position.y = odom_2_baselink.getOrigin().y();
-        msg.pose.position.z = odom_2_baselink.getOrigin().z();
+        //Baselink Pose zu Odom
+        double x_odom2Base = odom_2_baselink.getOrigin().x();
+        double y_odom2Base = odom_2_baselink.getOrigin().y();
+        double z_odom2Base = odom_2_baselink.getOrigin().z();
+        double w_rot_odom2Base = odom_2_baselink.getRotation().w();
+        double x_rot_odom2Base = odom_2_baselink.getRotation().x();
+        double y_rot_odom2Base = odom_2_baselink.getRotation().y();
+        double z_rot_odom2Base = odom_2_baselink.getRotation().z();
 
-        msg.pose.orientation.x = odom_2_baselink.getRotation().x();
-        msg.pose.orientation.y = odom_2_baselink.getRotation().y();
-        msg.pose.orientation.z = odom_2_baselink.getRotation().z();
-        msg.pose.orientation.w = odom_2_baselink.getRotation().w();
+//ALTE OPTION
+        msg.pose.position.x = x_odom2Base;
+        msg.pose.position.y = y_odom2Base;
+        msg.pose.position.z = z_odom2Base;
 
+        msg.pose.orientation.x = x_rot_odom2Base;
+        msg.pose.orientation.y = y_rot_odom2Base;
+        msg.pose.orientation.z = z_rot_odom2Base;
+        msg.pose.orientation.w = w_rot_odom2Base;
         pubTFodom2base.publish(msg);
+
+// OPTION 1
+        gtsam::Pose3 axis2Base = gtsam::Pose3(gtsam::Rot3(0,1,0,-1,0,0,0,0,1), gtsam::Point3(-base2axisTrans.x(), -base2axisTrans.y(), -base2axisTrans.z()));
+        gtsam::Pose3 base2Axis = gtsam::Pose3(gtsam::Rot3(0,-1,0,1,0,0,0,0,1), gtsam::Point3(base2axisTrans.x(), base2axisTrans.y(), base2axisTrans.z()));
+
+        float x_offset = base2axisTrans.x();
+        float y_offset = base2axisTrans.y();
+        float z_offset = base2axisTrans.z();
+        float psi_offset = -1.5707963;
+        float x_rot_offset = 0;
+        float y_rot_offset = 0;
+        float z_rot_offset = 0.707;
+        float w_rot_offset = 0.707;
+
+        //Achsenpose zu odom in Lidar Koordinatensystem
+        gtsam::Pose3 basePose = gtsam::Pose3(gtsam::Rot3(w_rot_odom2Base, x_rot_odom2Base, y_rot_odom2Base, z_rot_odom2Base), gtsam::Point3(x_odom2Base, y_odom2Base, z_odom2Base));
+        gtsam::Pose3 axisPose = basePose.compose(base2Axis);
+
+        double axis_x, axis_y, axis_z, axis_rot_x, axis_rot_y, axis_rot_z, axis_rot_w;
+
+        axis_x = axisPose.translation().x();
+        axis_y = axisPose.translation().y();
+        axis_z = axisPose.translation().z();
+        axis_rot_x = axisPose.rotation().toQuaternion().x();
+        axis_rot_y = axisPose.rotation().toQuaternion().y();
+        axis_rot_z = axisPose.rotation().toQuaternion().z();
+        axis_rot_w = axisPose.rotation().toQuaternion().w();
+
+        //Transformation Achsenpose in Staplerkoordinatensystem
+	    msg.pose.position.x = (axis_x-x_offset)*cos(psi_offset) + (axis_y-y_offset)*sin(psi_offset);
+        msg.pose.position.y = (-1)*(axis_x-x_offset)*sin(psi_offset) + (axis_y-y_offset)*cos(psi_offset);
+        msg.pose.position.z = axis_z - z_offset;
+
+        msg.pose.orientation.x = axis_rot_x-x_rot_offset;
+        msg.pose.orientation.y = axis_rot_y-y_rot_offset;
+        msg.pose.orientation.z = axis_rot_z-z_rot_offset;
+        msg.pose.orientation.w = axis_rot_w-w_rot_offset;
+
+        pubTFodom2axis.publish(msg);
         //END BEN
 
         // publish IMU path

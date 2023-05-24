@@ -114,6 +114,15 @@ public:
     Eigen::Vector3d extTrans;
     Eigen::Quaterniond extQRPY;
 
+    //measurepoint baselink
+    vector<double> base2axisRotV;
+    vector<double> base2axisRPYV;
+    vector<double> base2axisTransV;
+    Eigen::Matrix3d base2axisRot;
+    Eigen::Matrix3d base2axisRPY;
+    Eigen::Vector3d base2axisTrans;
+    Eigen::Quaterniond base2axisQRPY;
+
     // LOAM
     float edgeThreshold;
     float surfThreshold;
@@ -214,6 +223,14 @@ public:
         extRPY = Eigen::Map<const Eigen::Matrix<double, -1, -1, Eigen::RowMajor>>(extRPYV.data(), 3, 3);
         extTrans = Eigen::Map<const Eigen::Matrix<double, -1, -1, Eigen::RowMajor>>(extTransV.data(), 3, 1);
         extQRPY = Eigen::Quaterniond(extRPY);
+
+        nh.param<vector<double>>("lio_sam/base2axisRot", base2axisRotV, vector<double>());
+        nh.param<vector<double>>("lio_sam/base2axisRPY", base2axisRPYV, vector<double>());
+        nh.param<vector<double>>("lio_sam/base2axisTrans", base2axisTransV, vector<double>());
+        base2axisRot = Eigen::Map<const Eigen::Matrix<double, -1, -1, Eigen::RowMajor>>(base2axisRotV.data(), 3, 3);
+        base2axisRPY = Eigen::Map<const Eigen::Matrix<double, -1, -1, Eigen::RowMajor>>(base2axisRPYV.data(), 3, 3);
+        base2axisTrans = Eigen::Map<const Eigen::Matrix<double, -1, -1, Eigen::RowMajor>>(base2axisTransV.data(), 3, 1);
+        base2axisQRPY = Eigen::Quaterniond(base2axisRPY);
 
         nh.param<float>("lio_sam/edgeThreshold", edgeThreshold, 0.1);
         nh.param<float>("lio_sam/surfThreshold", surfThreshold, 0.1);
