@@ -39,7 +39,9 @@ public:
     Eigen::Affine3f imuOdomAffineBack;
 
     tf::TransformListener tfListener;
+    tf::StampedTransform odom_2_axis; // BEN
     tf::StampedTransform lidar2Baselink;
+
 
     double lidarOdomTime = -1;
     deque<nav_msgs::Odometry> imuOdomQueue;
@@ -136,6 +138,11 @@ public:
         tfOdom2BaseLink.sendTransform(odom_2_baselink);
 
         //BEN
+        // Transformation odom 2 axis using lookup transform
+        //tfListener.lookupTransform(odometryFrame, "axis_link", ros::Time(0), odom_2_axis);
+        // publishen wie odom_2_baselink und schauen
+        // KP AMK
+        
         // publish odom to base_link as PoseStamped
         geometry_msgs::PoseStamped msg;
         msg.header.stamp = odom_2_baselink.stamp_;
@@ -150,7 +157,7 @@ public:
         double y_rot_odom2Base = odom_2_baselink.getRotation().y();
         double z_rot_odom2Base = odom_2_baselink.getRotation().z();
 
-//ALTE OPTION
+// Ausgabe der position in Lidar
         msg.pose.position.x = x_odom2Base;
         msg.pose.position.y = y_odom2Base;
         msg.pose.position.z = z_odom2Base;
@@ -161,18 +168,18 @@ public:
         msg.pose.orientation.w = w_rot_odom2Base;
         pubTFodom2base.publish(msg);
 
-// OPTION 1
+// Ausgabe der Position und Rotation des FNP
+
+        //Eigen::Quaterniond quaternion(base2axisRot);
+
+        //gtsam::Rot3 base2AxisRotation = gtsam::Rot3(quaternion.x(), quaternion.y(), quaternion.z(), quaternion.w());
+
         gtsam::Pose3 axis2Base = gtsam::Pose3(gtsam::Rot3(0,1,0,-1,0,0,0,0,1), gtsam::Point3(-base2axisTrans.x(), -base2axisTrans.y(), -base2axisTrans.z()));
-        gtsam::Pose3 base2Axis = gtsam::Pose3(gtsam::Rot3(0,-1,0,1,0,0,0,0,1), gtsam::Point3(base2axisTrans.x(), base2axisTrans.y(), base2axisTrans.z()));
+        gtsam::Pose3 base2Axis = gtsam::Pose3(gtsam::Rot3(1,0,0,0,1,0,0,0,1), gtsam::Point3(base2axisTrans.x(), base2axisTrans.y(), base2axisTrans.z()));
 
         float x_offset = base2axisTrans.x();
         float y_offset = base2axisTrans.y();
         float z_offset = base2axisTrans.z();
-        float psi_offset = -1.5707963;
-        float x_rot_offset = 0;
-        float y_rot_offset = 0;
-        float z_rot_offset = 0.707;
-        float w_rot_offset = 0.707;
 
         //Achsenpose zu odom in Lidar Koordinatensystem
         gtsam::Pose3 basePose = gtsam::Pose3(gtsam::Rot3(w_rot_odom2Base, x_rot_odom2Base, y_rot_odom2Base, z_rot_odom2Base), gtsam::Point3(x_odom2Base, y_odom2Base, z_odom2Base));
@@ -188,17 +195,16 @@ public:
         axis_rot_z = axisPose.rotation().toQuaternion().z();
         axis_rot_w = axisPose.rotation().toQuaternion().w();
 
-        //Transformation Achsenpose in Staplerkoordinatensystem
-	    msg.pose.position.x = (axis_x-x_offset)*cos(psi_offset) + (axis_y-y_offset)*sin(psi_offset);
-        msg.pose.position.y = (-1)*(axis_x-x_offset)*sin(psi_offset) + (axis_y-y_offset)*cos(psi_offset);
-        msg.pose.position.z = axis_z - z_offset;
+        msg.pose.position.x = axis_x;
+        msg.pose.position.y = axis_y;
+        msg.pose.position.z = axis_z;
 
-        msg.pose.orientation.x = axis_rot_x-x_rot_offset;
-        msg.pose.orientation.y = axis_rot_y-y_rot_offset;
-        msg.pose.orientation.z = axis_rot_z-z_rot_offset;
-        msg.pose.orientation.w = axis_rot_w-w_rot_offset;
+        msg.pose.orientation.x = axis_rot_x;
+        msg.pose.orientation.y = axis_rot_y;
+        msg.pose.orientation.z = axis_rot_z;
+        msg.pose.orientation.w = axis_rot_w;
 
-        pubTFodom2axis.publish(msg);
+        pubTFodom2axis.publish(msg); 
         //END BEN
 
         // publish IMU path
@@ -270,9 +276,9 @@ public:
     const double delta_t = 0;
 
     int key = 1;
-
-    gtsam::Pose3 imu2Lidar = gtsam::Pose3(gtsam::Rot3(1, 0, 0, 0), gtsam::Point3(-extTrans.x(), -extTrans.y(), -extTrans.z()));
-    gtsam::Pose3 lidar2Imu = gtsam::Pose3(gtsam::Rot3(1, 0, 0, 0), gtsam::Point3(extTrans.x(), extTrans.y(), extTrans.z()));
+    //TODO ROTATION RICHTIG EINTRAGEN
+    gtsam::Pose3 imu2Lidar = gtsam::Pose3(gtsam::Rot3(1,0,0,0), gtsam::Point3(-extTrans.x(), -extTrans.y(), -extTrans.z()));
+    gtsam::Pose3 lidar2Imu = gtsam::Pose3(gtsam::Rot3(1,0,0,0), gtsam::Point3(extTrans.x(), extTrans.y(), extTrans.z()));
 
     IMUPreintegration()
     {

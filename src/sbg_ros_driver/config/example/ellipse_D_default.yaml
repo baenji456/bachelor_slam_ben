@@ -74,7 +74,7 @@ imuAlignementLeverArm:
   # 3 ALIGNMENT_RIGHT     IMU Axis is turned in vehicle's right direction
   # 4 ALIGNMENT_UP        IMU Axis is turned in vehicle's up direction
   # 5 ALIGNMENT_DOWN      IMU Axis is turned in vehicle's down direction
-  axisDirectionX: 0
+  axisDirectionX: 3 #0 
   # IMU Y axis direction in vehicle frame
   # 0 ALIGNMENT_FORWARD   IMU Axis is turned in vehicle's forward direction
   # 1 ALIGNMENT_BACKWARD  IMU Axis is turned in vehicle's backward direction
@@ -82,7 +82,7 @@ imuAlignementLeverArm:
   # 3 ALIGNMENT_RIGHT     IMU Axis is turned in vehicle's right direction
   # 4 ALIGNMENT_UP        IMU Axis is turned in vehicle's up direction
   # 5 ALIGNMENT_DOWN      IMU Axis is turned in vehicle's down direction
-  axisDirectionY: 3
+  axisDirectionY: 1 #3
   # Residual roll error after axis alignment rad
   misRoll: 0
   # Residual pitch error after axis alignment rad

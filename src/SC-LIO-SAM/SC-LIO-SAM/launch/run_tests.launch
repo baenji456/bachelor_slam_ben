@@ -2,11 +2,12 @@
 
     <arg name="project" default="lio_sam"/>
     <arg name="bags_directory" default="/home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben"/>
-    <arg name="bagfilename" default = "namingerror"/>
+    <arg name="filename" default = "namingerror"/>
+    <arg name="bagfile" default = "namingerror"/>
 
 
     <!-- true, wenn rosbag genutzt wird-->
-    <!-- <param name ="/use_sim_time" value="true"/> -->
+    <param name ="/use_sim_time" value="true"/>
 
     <!-- Parameters -->
     <rosparam file="$(find lio_sam)/config/params_liosam.yaml" command="load" />
@@ -24,9 +25,9 @@
     <include file="$(find lio_sam)/launch/include/module_rviz.launch" />
 
     <!--Start recording /pose/odom2base-->
-    <node name="record" pkg="rosbag" type="record" args="-O $(arg bags_directory)/$(arg bagfilename).bag /pose/odom2base "/>
+    <node name="record" pkg="rosbag" type="record" args="-O $(arg bags_directory)/$(arg filename).bag /lio_sam/mapping/path /pose/odom2axis /clock"/>
 
     <!--Start playing bagfile-->
-    <node name="play" pkg="rosbag" type="play" args="-q -d 10 /home/stapler1/Schreibtisch/benni_ba/bachelor_slam_ben/labor_klein.bag" required="true"/>
+    <node name="play" pkg="rosbag" type="play" args="--clock -q -d 10 $(arg bagfile)" required="true"/>
 
 </launch>

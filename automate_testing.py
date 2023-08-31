@@ -1,12 +1,22 @@
 import yaml
 import subprocess
 import time
+import argparse
 
-# TODO argparse für abzuspielendes bagfile
+parser = argparse.ArgumentParser(description='File Path Parser')
+parser.add_argument('bag_path', type=str, help='Path to the file')
+parser.add_argument('num_iterations', type=int, help='How often each setup')
+args = parser.parse_args()
+bag_path = args.bag_path
+num_iterations = args.num_iterations
+
+setup_ctr = 0
 
 with open('files_for_testing/param_setups.txt', 'r') as file:
     for line in file:
         line_split = line.split()
+
+        setup_ctr = setup_ctr + 1
 
         # Open the YAML file for reading
         with open('src/SC-LIO-SAM/SC-LIO-SAM/config/params_liosam.yaml', 'r') as file:
@@ -46,9 +56,12 @@ with open('files_for_testing/param_setups.txt', 'r') as file:
         KF = "{}_{}_{}_{}".format(line_split[6], line_split[7], line_split[8], line_split[9])
         VF = "{}_{}_{}".format(line_split[10], line_split[11], line_split[12])
         LF = "{}_{}_{}_{}".format(line_split[13], line_split[14], line_split[15], line_split[16])
+        
+        for i in range(num_iterations):
+            setup_str = str(setup_ctr)
+            iter_str = str(i)
+            filename = "SETUP_{}_ITER_{}_LC_{}_KF_{}_VF_{}_LF_{}".format(setup_str, iter_str, LC, KF, VF, LF)
 
-        filename = "LC_{}_KF_{}_VF_{}_LF_{}".format(LC, KF, VF, LF)
-
-        subprocess.run(['.files_for_testing/start_lio_sam.sh', "labor_klein.bag", filename])
-        time.sleep(10)
-        subprocess.run(['.files_for_testing/bag_to_csv.sh', filename])
+            subprocess.run(['files_for_testing/start_lio_sam.sh', bag_path, filename])
+            time.sleep(10)
+            subprocess.run(['files_for_testing/bag_to_csv.sh', filename])
