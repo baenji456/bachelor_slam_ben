@@ -1,5 +1,5 @@
-edgeFeatureMinValidNum: '10'
-edgeThreshold: '1.0'
+edgeFeatureMinValidNum: '5'
+edgeThreshold: '0.5'
 ekf_gps:
   base_link_frame: base_link
   frequency: 50
@@ -275,9 +275,9 @@ ekf_gps:
   two_d_mode: false
   world_frame: odom
 historyKeyframeFitnessScore: '0.3'
-historyKeyframeSearchNum: '20'
-historyKeyframeSearchRadius: '2'
-historyKeyframeSearchTimeDiff: '30'
+historyKeyframeSearchNum: '25'
+historyKeyframeSearchRadius: '15.0'
+historyKeyframeSearchTimeDiff: '30.0'
 lio_sam:
   Horizon_SCAN: 1024
   N_SCAN: 128
@@ -378,9 +378,9 @@ lio_sam:
   useGpsElevation: false
   useImuHeadingInitialization: false
   z_tollerance: 1000
-loopClosureFrequency: '5.0'
-mappingCornerLeafSize: '0.1'
-mappingSurfLeafSize: '0.2'
+loopClosureFrequency: '1.0'
+mappingCornerLeafSize: '0.2'
+mappingSurfLeafSize: '0.4'
 navsat:
   broadcast_utm_transform: false
   broadcast_utm_transform_as_parent_frame: false
@@ -391,11 +391,11 @@ navsat:
   wait_for_datum: false
   yaw_offset: 0
   zero_altitude: true
-odometrySurfLeafSize: '0.2'
-surfFeatureMinValidNum: '100'
-surfThreshold: '0.1'
+odometrySurfLeafSize: '0.4'
+surfFeatureMinValidNum: '50'
+surfThreshold: '0.05'
 surroundingKeyframeDensity: '2.0'
 surroundingKeyframeSearchRadius: '50.0'
-surroundingKeyframeSize: '100'
+surroundingKeyframeSize: '50'
 surroundingkeyframeAddingAngleThreshold: '0.2'
-surroundingkeyframeAddingDistThreshold: '1.0'
+surroundingkeyframeAddingDistThreshold: '1'

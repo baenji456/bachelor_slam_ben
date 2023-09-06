@@ -26,7 +26,7 @@ with open('files_for_testing/param_setups.txt', 'r') as file:
         # Modify some parameters in the YAML data 17 Parameter
         #LoopClosure Parameter
         data['loopClosureFrequency'] = line_split[0] 
-        data['surroundingKeyframeSize'] = line_split[1] 
+        data['surroundingKeyframeSize'] = line_split[1] # WIRD NICHT GENUTZT
         data['historyKeyframeSearchRadius'] = line_split[2]
         data['historyKeyframeSearchTimeDiff'] = line_split[3] 
         data['historyKeyframeSearchNum'] = line_split[4] 
